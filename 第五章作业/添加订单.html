@@ -1,0 +1,46 @@
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<style type="text/css">
+</style>
+</head>
+<body>
+<table  border="1" cellpadding="0" cellspacing="0" id ="order">
+  <tr class="title">
+    <td>&nbsp;商品名称</td>
+    <td>&nbsp;数量</td>
+    <td>&nbsp;价格</td>
+    <td>&nbsp;操作</td>
+  </tr>
+  <tr id ="del1">
+    <td>&nbsp;防滑真皮休闲鞋</td>
+    <td>&nbsp;12</td>
+    <td>&nbsp;&yen;58.50</td>
+    <td>&nbsp;<input type="button" name="rowdel" value="删除" onclick='del("del1")'/></td>
+  </tr>
+  <tr>
+    <td colspan="4" style="height:30px;">&nbsp;<input type="button" name="addOrder" value="增加订单" onclick="addRow()"/></td>
+    </tr>
+</body>
+<script type="text/javascript">
+function addRow(){
+	var at = document.getElementById("order");
+	var row_index=at.rows.length-1;
+	var newRow = at.insertRow(row_index);
+	newRow.id="row"+row_index;
+	var col1 = newRow.insertCell(0);
+	col1.innerHTML="抗疲劳神奇钛项圈";
+	var col2 =newRow.insertCell(1);
+	col2.innerHTML=row_index;
+	var col3=newRow.insertCell(2);
+	col3.innerHTML="&yen;49.00";
+	var col4=newRow.insertCell(3);
+	col4.innerHTML="<input name='del"+row_index+"' type='button'  value='删除' onclick=\"del('row"+row_index+ "')\"/>"
+}
+function del(rowId){
+	var row =document.getElementById(rowId).rowIndex;
+	document.getElementById("order").deleteRow(row);
+}
+</script>
+</html>

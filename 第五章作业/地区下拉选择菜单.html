@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>城市级联下拉菜单</title>
+</head>
+<body>
+<script language="javascript">
+function onchanges(){
+  var pro = document.getElementById('selectp').value;
+  var qu = document.getElementById('selectc').value;
+  //var selectObj = document.getElementById('selectc');
+  var city =document.getElementsByTagName('option');
+ if(pro==1){
+    city[4].innerHTML='广州';
+    city[4].value='1';
+    city[5].innerHTML='珠海';
+    city[5].value='2';
+    if(qu==1){
+      city[19].innerHTML='天河区';
+      city[19].value='1';
+      city[20].innerHTML='白云区';
+      city[20].value='2';
+    }
+    if(qu==2){
+      city[19].innerHTML='香洲区';
+      city[19].value='1';
+      city[20].innerHTML='金湾区';
+      city[20].value='2';
+    }
+    //太多城市了，都是雷同方式添加，此处省略一万字……
+     //city.options.add(new Option("广州","0")); //这个兼容IE与firefox  
+}
+ if(pro==2){
+    city[4].innerHTML='长沙';
+    city[4].value='1';
+    city[5].innerHTML='株洲';
+    city[5].value='2';
+     if(qu==1){
+      city[19].innerHTML='奇怪区';
+      city[19].value='1';
+      city[20].innerHTML='好巧区';
+      city[20].value='2';
+    }
+    if(qu==2){
+      city[19].innerHTML='牛逼区';
+      city[19].value='1';
+      city[20].innerHTML='傻逼区';
+      city[20].value='2';
+    }
+    //太多城市了，都是雷同方式添加，此处省略一万字……
+     //city.options.add(new Option("广州","0")); 
+}
+   // document.createElement('')
+
+}
+
+//Array('广州','珠海','中山','佛山','东莞','清远','肇庆','阳江','湛江','韶关','惠州','河源','汕尾','汕头','梅州');
+
+
+</script>
+省份：<select id="selectp"  onChange="onchanges();">
+   <option value="0" selected >请选择</option>
+   <option value="1">广东省</option>
+   <option value="2">湖南省</option>
+   <!--太多省份了，都是雷同方式添加，此处省略一万字……-->
+  </select>
+
+县/市
+  <select id="selectc" onChange="onchanges();">
+   <option value="0" selected>不限-- </option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+  </select>
+地区：
+  <select id="selectq">
+   <option value="0" selected>不限-- </option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+   <option></option>
+  </select>
+</body>
+</html>
