@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>弹窗</title>
+</head>
+
+<body>
+<table border="0" align="center" bgcolor="#ffffff">
+<tr><td><img src="image/head.jpg" width="761" height="389"></td>
+</tr>
+<tr>
+<td>
+	<img src="image/foot.jpg" width="502" height="90" align="top">
+    <input type="button" name="regButton" value="用户注册" onclick="openwindow()">
+    <input type="button" name="exitButton" value="退出" onclick="closewindow()"> 
+</td>
+</tr>
+
+</table>
+</body>
+<script>
+function openwindow(){
+	window.status="系统当前状态:您正在注册用户……";
+	window.open("register.html","_blank","width=611px,height=500px,top=100px,left=100px");
+}
+function closewindow(){
+	if(window.confirm("您确认要退出系统吗？")){
+		opener=null;
+		window.close();			
+	}	
+}
+</script>
+</html>
