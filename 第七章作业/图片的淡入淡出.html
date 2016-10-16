@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片的淡入淡出</title>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+  $("#btn").click(function(){
+    $("#div1").fadeToggle(1000);
+    
+  });
+});
+	</script>
+</head>
+<body>
+	<input type="button" value="点击显示隐藏图片" id="btn">
+	<div id="div1" style="width:500px;height:480px;display:none;background-color:red;"></div>
+</body>
+</html>
