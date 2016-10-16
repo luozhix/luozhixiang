@@ -108,6 +108,7 @@
 <script>
   var items=document.getElementsByTagName("li");
   var brand=document.getElementById("brands");
+  var a =document.getElementsByTagName("a");
   var bool=1;
   var j=6; 
   function hid(){
@@ -123,7 +124,6 @@
       }
   }
   function repeatHid(){
-     //alert(j);
      items[j-1].style.display="none";
      j--;
      if(j>6){
@@ -133,13 +133,26 @@
   function show(){
     if(bool==1){
       repeatShow();
+      //alert(a[1].innerHTML);
+      for(var i=0;i<a.length-1;i++)
+       if(a[i].innerHTML=="佳能"||a[i].innerHTML=="尼康"||a[i].innerHTML=="奥林巴斯")
+           a[i].style.color="#F50";
+      //a[3].style.color="#F50";
+     // a[10].style.color="#F50";
       brand.innerHTML="精简显示品牌";
       brand.style.backgroundImage="url(images/up.gif)";
       bool=2;
     }
     else if(bool==2){
       //alert(bool);
+
+     // a[0].style.color="#04D";
+      //a[3].style.color="#04D";
+      //a[10].style.color="#04D";
       repeatHid();
+     for(var i=0;i<a.length-1;i++)
+       if(a[i].innerHTML=="佳能"||a[i].innerHTML=="尼康"||a[i].innerHTML=="奥林巴斯")
+         a[i].style.color="#04D";
       brand.innerHTML="显示全部品牌";
       brand.style.backgroundImage="url(images/down.gif)";
       bool=1;
