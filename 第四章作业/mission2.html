@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style>
+body{
+	width:1388px;
+	margin-left:0px;
+	margin-top:0px;
+	}
+</style>
+<body>
+<img src="image/meiliMain.jpg" alt="美丽说"/>
+</body>
+<script>
+var index=0;
+function changetitle(){
+	if(index%2==0)
+		document.title="★☆美丽说☆★";
+	else
+		document.title="☆★美丽说★☆";
+	index++;
+	setTimeout("changetitle()",2000);
+	}
+	window.onload=changetitle;
+</script>
+</html>
